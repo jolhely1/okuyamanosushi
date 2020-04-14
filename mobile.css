@@ -80,11 +80,33 @@
 
 @media (max-width: 670px) {
   /*---リンクパーツ--*/
+  header {
+    background-color: white;
+    padding: 0 5%;
+  }
   header .header-container {
-    width: 60%;
+    width: 100%;
+    margin: 0 auto;
+    display: inline-block;
+  }
+  header .header-container .logo {
+    width: 100px;
   }
   header .header-container .header-right {
+    float: right;
+    height: 30px;
     font-size: 10px;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    margin: 6px;
+    text-align: center;
+  }
+  header .header-container .header-right p {
+    line-height: 30px;
+  }
+  header .header-container .header-right .br-none {
+    display: none;
   }
   .link .link-container a {
     font-size: 10px;
