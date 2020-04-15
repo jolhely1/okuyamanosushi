@@ -84,27 +84,32 @@
   }
   header .header-container {
     width: 100%;
-    margin: 0 auto;
-    display: inline-block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
-  header .header-container .logo {
-    width: 80px;
-    padding: 5px;
+  header .header-container .header-left {
+    margin: 0 auto;
+  }
+  header .header-container .header-left .logo {
+    width: 70px;
   }
   header .header-container .header-right {
     float: right;
-    height: 30px;
-    margin: 6px;
+    margin: 0px;
     text-align: center;
   }
   header .header-container .header-right p {
-    line-height: 30px;
     font-size: 10px;
   }
   header .header-container .header-right .br-none {
     display: none;
   }
-  header .header-container .header-right .clear {
+  header .header-container .clear {
     clear: both;
   }
   .link .link-container a {
