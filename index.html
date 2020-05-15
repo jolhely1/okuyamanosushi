@@ -17,7 +17,20 @@
                 pause: 5000,
             });
         });
+
+        $(function(){
+  $('a[href^="#"]').click(function(){
+    var speed = 500;
+    var href= $(this).attr("href");
+    var target = $(href == "#" || href == "" ? 'html' : href);
+    var position = target.offset().top;
+    $("html, body").animate({scrollTop:position}, speed, "swing");
+    return false;
+  });
+});
     </script>
+
+
 </head>
 <body>
 
@@ -42,15 +55,15 @@
 <!---リンクパーツ-->
     <div class="link">
         <div class="link-container">
-            <a class="" href="">- Home -</a>
-            <a class="" href="">- Menu -</a>
-            <a class="" href="">- Itallap -</a>
-            <a class="" href="">- Belépés -</a>
+            <a class="" href="#home">- Home -</a>
+            <a class="" href="#menu">- Menu -</a>
+            <a class="" href="#drink">- Itallap -</a>
+            <a class="" href="#access">- Belépés -</a>
         </div> 
     </div>
 
 <!---イントロパーツ-->
-    <div class="intro-wrapper">
+    <div id="home" class="intro-wrapper">
         <div class="container">
             <h1>Sachi Okuyama mesterszakács</h1>
             <div class="intro-photo-text">
@@ -70,7 +83,7 @@
     </div>
 
 <!---メニューパーツ-->
-    <div class="menu-wrapper">
+    <div id="menu" class="menu-wrapper">
         <div class="container">
             <h1>- Menu -</h1>
             <div class="menu">
@@ -101,7 +114,7 @@
     </div>
 
 <!---飲み物パーツ-->
-<div class="menu-wrapper">
+<div id="drink" class="menu-wrapper">
     <div class="container">
         <h1>- Ittalap -</h1>
         <div class="menu">
@@ -127,7 +140,7 @@
 </div>
 
 <!---店舗案内パーツ-->
-<div class="access-wrapper">
+<div id="access" class="access-wrapper">
     <div class="container">
         <h1>- Belépés -</h1>
         <div class="map">
